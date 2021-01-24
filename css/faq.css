@@ -1,0 +1,290 @@
+@charset "UTF-8";
+
+/* --- CSS Document --- */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+/* --- Global Styles --- */
+* {
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
+}
+
+/* --- General Styles --- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  vertical-align: middle;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  height: 100vh;
+  position: relative;
+}
+
+#page {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border-radius: 25px;
+  padding: 0 2vw 5vw 2vw;
+  margin: 3vw;
+  width: 94%;
+  box-shadow: 0px 3vmin 10vmin hsl(238, 29%, 16%);
+}
+
+.right {
+  margin-right: 0px;
+}
+
+/* --- Header Management --- */
+header {
+  margin-top: -32.5%;
+}
+
+header img {
+  display: block;
+  margin: auto;
+
+  /* padding-bottom: 5vw; */
+}
+
+header img.foreground {
+  position: relative;
+  left: -3vw;
+}
+
+header img.background {
+  margin-top: -25%;
+}
+
+hr {
+  border: none;
+  width: 95%;
+  height: 1px;
+  color: hsl(240, 5%, 91%);
+  background-color: hsl(240, 5%, 91%);
+}
+
+#faq i {
+  color: hsl(14, 88%, 65%);
+}
+
+.desktop {
+  display: none;
+}
+
+/* --- Nav management --- */
+
+/* --- Grid & Flex Style --- */
+#faq {
+  display: grid;
+  grid-template-columns: auto 10%;
+}
+
+#faq h1 {
+  grid-column: 1/3;
+}
+
+#faq a {
+  grid-column: 1/2;
+}
+
+#faq i {
+  grid-column: 2/3;
+}
+
+#faq hr {
+  grid-column: 1/3;
+}
+
+#faq article {
+  grid-column: 1/3;
+}
+
+/* --- Page Content --- */
+#faq {
+  padding: 2vw;
+}
+
+#faq h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+}
+
+#faq article {
+  display: none;
+}
+
+#faq a {
+  text-decoration: none;
+}
+
+#faq a,
+#faq i,
+#faq article {
+  padding: 2vw;
+}
+
+#faq a:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+#faq a:focus {
+  font-weight: 700;
+}
+
+#faq a:focus + i + article {
+  display: block;
+}
+
+#faq a:focus + i {
+  transform: rotate(180deg);
+}
+
+/* --- Footer Style --- */
+
+/* ---Media Queries for tablet Screens */
+@media only screen and (min-width: 768px) {
+  /* --- General Styles --- */
+
+  /* --- Header Management --- */
+  header {
+    margin-top: -15%;
+  }
+
+  header img.foreground {
+    left: -2vw;
+  }
+
+  header img.background {
+    margin-top: -12.5%;
+  }
+
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+
+  /* --- Footer Style --- */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* --- General Styles --- */
+  #page {
+    /* overflow: hidden; */
+    position: relative;
+    margin: auto;
+    width: 75%;
+    height:75%;
+    padding-bottom: 0px;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position-x: -612.5%;
+    background-position-y: 75%;
+    background-repeat: no-repeat;
+  }
+
+  /* --- Header Management --- */
+  header {
+    margin-top: auto;
+    margin-left: -5%;
+    overflow: visible;
+   
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  header img {
+    margin: 0;
+    
+  }
+
+  header img.foreground {
+    position: relative;
+    z-index: 1;
+    clip-path: inset(0% 0% 0% 15%);
+    transform: translateY(25%);
+    left: -14.3%;
+  }
+
+  header img.box {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    left: -18.5%;
+    top: 50%;
+    transform: translateY(-70%);
+  }
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+  #page {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'header content'
+    'header content'
+    'header content'
+    'header content'
+    'header content'
+    'header content'
+    'footer footer'
+    ;
+    
+
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  #faq {
+    grid-area: content;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  /* --- Content Style --- */
+  section#faq {
+    height: 100%;
+    padding-left: 0px;
+  }
+
+  #faq h1 {
+    margin-left: 0px;
+    /* padding-left: 2vw; */
+  }
+
+  #faq a,
+  #faq i,
+  #faq article {
+    padding: 1vmin;
+  }
+
+  /* --- Footer Style --- */
+  footer {
+    position: relative;
+    padding: 0.5vmin;
+    bottom: 0px;
+  }
+}
+
