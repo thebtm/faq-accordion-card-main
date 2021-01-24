@@ -187,11 +187,11 @@ hr {
     position: relative;
     margin: auto;
     width: 75%;
-    height:75%;
+    height: 60%;
     padding-bottom: 0px;
     background-image: url(../images/bg-pattern-desktop.svg);
-    background-position-x: -612.5%;
-    background-position-y: 75%;
+    background-position-x: -570px;
+    background-position-y: -275px;
     background-repeat: no-repeat;
   }
 
@@ -219,16 +219,16 @@ hr {
   header img.foreground {
     position: relative;
     z-index: 1;
-    clip-path: inset(0% 0% 0% 15%);
+    clip-path: inset(0px 0px 0px 70px);
     transform: translateY(25%);
-    left: -14.3%;
+    left: -76px;
   }
 
   header img.box {
     position: relative;
     z-index: 2;
     overflow: hidden;
-    left: -18.5%;
+    left: -95px;
     top: 50%;
     transform: translateY(-70%);
   }
