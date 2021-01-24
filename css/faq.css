@@ -187,7 +187,6 @@ hr {
     position: relative;
     margin: auto;
     width: 75%;
-    height: 60%;
     padding-bottom: 0px;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-position-x: -570px;
@@ -277,9 +276,17 @@ hr {
   #faq a,
   #faq i,
   #faq article {
-    padding: 1vmin;
+    padding: 0vmin;
   }
 
+  #faq i {
+    width: 0.8em;
+    height: 1em;
+  }
+
+  #faq hr {
+    margin-left: 0px;
+  }
   /* --- Footer Style --- */
   footer {
     position: relative;
