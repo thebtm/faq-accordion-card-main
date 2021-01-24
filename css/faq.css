@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* --- CSS Document --- */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* --- Global Styles --- */
+* {
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
+}
+
+/* --- General Styles --- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  vertical-align: middle;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  height: 100vh;
+  position: relative;
+}
+
+#page {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0 2vw 5vw 2vw;
+  margin: 3vw;
+  width: 94%;
+}
+
+.right {
+  margin-right: 0px;
+}
+
+/* --- Header Management --- */
+header {
+  margin-top: -32.5%;
+}
+
+header img {
+  display: block;
+  margin: auto;
+
+  /* padding-bottom: 5vw; */
+}
+
+header img.foreground {
+  position: relative;
+  left: -3vw;
+}
+
+header img.background {
+  margin-top: -25%;
+}
+
+hr {
+  border: none;
+  width: 95%;
+  height: 1px;
+  color: hsl(240, 5%, 91%);
+  background-color: hsl(240, 5%, 91%);
+}
+
+/* --- Nav management --- */
+
+/* --- Grid & Flex Style --- */
+#faq {
+  display: grid;
+  grid-template-columns: auto 10%;
+}
+
+#faq h1 {
+  grid-column: 1/3;
+}
+
+#faq a {
+  grid-column: 1/2;
+}
+
+#faq i {
+  grid-column: 2/3;
+}
+
+#faq hr {
+  grid-column: 1/3;
+}
+
+#faq article {
+  grid-column: 1/3;
+}
+
+/* --- Page Content --- */
+section#faq {
+  padding: 2vw;
+}
+
+section#faq h1 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+}
+
+#faq article {
+  display: none;
+}
+
+#faq a {
+  text-decoration: none;
+}
+
+#faq a, #faq i, #faq article {
+  padding: 2vw;
+}
+
+#faq a:focus {
+  font-weight: 700;
+}
+
+#faq a:focus + i + hr + article {
+  display: block;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+#faq a:focus + i {
+  transform: rotate(180deg);
+}
+
+
+/* --- Footer Style --- */
+
+/* ---Media Queries for tablet Screens */
+@media only screen and (min-width: 768px) {
+  /* --- General Styles --- */
+
+  /* --- Header Management --- */
+  header {
+    margin-top: -15%;
+  }
+
+  header img.foreground {
+    left: -2vw;
+  }
+
+  header img.background {
+    margin-top: -12.5%;
+  }
+
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+
+  /* --- Footer Style --- */
+}
+
+@media only screen and (min-width: 992px) {
+  /* --- General Styles --- */
+
+  /* --- Header Management --- */
+
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+
+  /* --- Footer Style --- */
+}
+
+/* --- Media Query to have an upper site limit */
+@media only screen and (min-width: 1200px) {
+  /* --- General Styles --- */
+
+  /* --- Header Management --- */
+
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+
+  /* --- Footer Style --- */
+}
+
+@media only screen and (min-width: 1440px) {
+  /* --- General Styles --- */
+
+  /* --- Header Management --- */
+
+  /* --- Nav management --- */
+
+  /* --- Grid Style --- */
+
+  /* --- Footer Style --- */
+}
